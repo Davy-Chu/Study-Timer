@@ -5,59 +5,31 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
     <title>Timer</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-body {
-  height: 1000px; 
-  width: 1000px; 
-  overflow: hidden; 
-}
-</style>
 </head>
 <body>
-	<script src="script.js">
-	</script>
+	<script src="index.js"></script>
 
 
 
 	<div class="times">
 
-		<label for="sTime">Current Study Time</label>
+		<label for="sTime">Current Study Time </label>
       <input type="number" id="study" name="sTime" value="25">
         <button type="button" id="setTime" onclick="setTime()">Set</button>
-        <label for="bTime">Current Break Time</label>
+        <label for="bTime">Current Break Time </label>
      <input type="number" id="break" name="bTime" value="5">
+        <button type="button" id="setBreak" onclick="setBreak()">Set</button>
   </div>
   <h1 id="t1">Study Time</h1>
   <h3 id="t2">Get to Work!</h3>
   <div class="timer">
-    <script>
-      // document.getElementById('study').value = document.getElementById('study').innerText;
-      console.log(document.getElementById('study').innerHTML+"asd");
-      var cTime = document.getElementById('study').value;
-      let study = cTime*60;
-    </script>
       <p id="countdown">25:00</p>
   </div>
   <div class="controls">
       <table>
         <tr>
-            <td><input  type="button" id="start" value="Start"></td>
+            <td><input  type="button" id="start" value="Start" onclick="startTimer()"></td>
             <td><input type="button" id="reset" value="Reset" onclick="rst()"></td>
-            <script>
-              document.getElementById("start").addEventListener("click", function() {
-                if (document.getElementById("start").value === "Pause") {
-                    document.getElementById("start").setAttribute("value", "Resume");
-                    stop = true;
-                } 
-                else if (document.getElementById("start").value === "Resume" || document.getElementById("start").value === "Start") {
-                    stopper = setInterval(countDec, 1000);
-                    document.getElementById("start").setAttribute("value", "Pause");
-                    stop = false;
-                    console.log("start");
-                }
-            });
-            </script>
           </tr>
       </table>
   		</div>
