@@ -1,57 +1,96 @@
 *{
-	margin: 0;
+	  margin: 0;
   	padding: 0;
     position: relative;
     color:#ebf2ec;
     background-color:#32d14d;
     font-family: Arial;
 }
- .times{
-     
-/*     height: 200px; */
-  	display: flex;
-    justify-content: center;
-  	text-align: center;
-/*     left:47%; */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
-
+label{
+    margin-right:1%;
+}
 h1{
+  margin: 0 auto;
+	width: 100vw;
 	display: flex;
-    justify-content: center;
-    text-align:center;
-    line-height:1;
-    height:45px;
-    font-size:300%;
+  justify-content: center;
+  text-align:center;
+  line-height:1;
+  height:45px;
+  font-size:300%;
 }
 h3{
-/* 	left: 73%; */
+    width: 100vw;
+    margin: 0 auto;
     display:flex;
     justify-content:center;
     text-align:center;
     top:65px;
 }
-.timer{
-    display:flex;
+ .times{
+    width: 100vw;
+    margin: 0;
+  	display: flex;
+    justify-content: center;
+  	text-align: center;
+}
+.controls{
+    width:100vw;
+	  display:flex;
     justify-content:center;
-/* 	left:65.5%; */
     top:150px;
+}
+.timer{
+    width: 100vw;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    top:150px;
+    margin: 0 auto;
     font-size: 600%;
- 	overflow:inherit;
+ 	  overflow:inherit;
+}
+#setTime{
+    margin-right: 5%;
+    background-color:#bec4bf;
+    color:black;
+    border-radius:3px;
+    border-color:white;
+    cursor: pointer;
+}
+#setBreak{
+    background-color:#bec4bf;
+    color:black;
+    border-radius:3px;
+    border-color:white;
+    cursor: pointer;
 }
 #start{
     background-color:#bec4bf;
     color:black;
     border-radius:3px;
     border-color:white;
+    cursor: pointer;
 }
 #reset{
-	background-color:#bec4bf;
+  	background-color:#bec4bf;
     color:black;
     border-radius:3px;
     border-color:white;
+    cursor: pointer;
 }
-.controls{
-	display:flex;
-    justify-content:center;
-    top:150px;
+#study{
+    background-color: #006400;
+    border: none;
+    border-radius: 3px;
+}
+#break{
+    background-color: #006400;
+    border: none;
+    border-radius: 3px;
 }
