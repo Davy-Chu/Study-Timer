@@ -1,2 +1,2 @@
 # Study-Timer
-Pomodoro study time
+Pomodoro study timer
