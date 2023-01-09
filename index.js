@@ -1,62 +1,74 @@
-//cTime = time in minutes on timer
-//OK on the input field for study time, make a onclick function that increases / decreases time by 5 minute increments
+let sTime = 25, breakTime = 5, study;
+const start = document.getElementById("start");
+const count = document.getElementById("countdown"); 
+let stop = false,stud = true;
 function sound() {
     var mySound = new Audio('zapsplat_household_alarm_clock_digital_beeps_002_60069.mp3');
     mySound.play();
 }
-var stop = false,stud = true;
-
+function startTimer() {
+                if (start.value === "Pause") {
+                    start.setAttribute("value", "Resume");
+                    stop = true;
+                } 
+                else if (start.value === "Resume" || start.value === "Start") {
+                    if(start.value === "Start"){
+                        study = sTime * 60;
+                    }
+                    stopper = setInterval(countDec, 1000);
+                    document.getElementById("start").setAttribute("value", "Pause");
+                    stop = false;
+                    console.log("start");
+                }
+            }
 function countDec() {
-    
-  const count = document.getElementById("countdown"); 
-    if (study === -1 || stop) {
+    if (study === -1 || stop) {//Timer runs out or paused
       clearInterval(stopper);
-      if(study === -1 && stud){
+      if(study === -1 && stud){//If study time ends
         sound();
         document.getElementById("t1").innerHTML = "Break Time";
         document.getElementById("t2").innerHTML = "Take a walk, or grab a snack!";
-        cTime = 5;
-        study = 300;
+        study = breakTime * 60;
          stud = false;
         stopper = setInterval(countDec,1000);
       }
-      else if(study <= 0 && !stud){
+        
+      else if(study <= 0 && !stud){//If break time ends
         sound();
-        stop = true;
-         document.getElementById("t1").innerHTML = "Study Time";
+        rst();
+        document.getElementById("t1").innerHTML = "Study Time";
         document.getElementById("t2").innerHTML = "Get to Work!";
-        cTime = document.getElementById("study").value;
-          // cTime = 25;
-        study = cTime*60;
-          // study = 1500;
-        document.getElementById('start').setAttribute('value','Start');
-          console.log(cTime);
       }
-        // console.log("stop");
-        if (stop) {
+        if (stop) {//if paused 
             stop = false;
         }
         return;
     }
-    
+    //base case
     let min = Math.floor(study / 60);
     let seconds = study % 60;
     seconds = seconds < 10 ? '0' + seconds : seconds;
     min = min < 10 ? '0' + min : min;
     count.innerHTML = (min + ":" + seconds);
+    console.log(study);
     study--;
 }
 function rst() {
-    study = cTime * 60;
-    document.getElementById("countdown").innerHTML = `${cTime}:00`;
+    study = sTime * 60;
+    count.innerHTML = `${sTime}:00`;
     stop = true;
     document.getElementById("start").setAttribute("value", "Start");
 }
 
 function setTime() {
-    if(stud){
-        document.getElementById("study").setAttribute("value",cTime);
-    	document.getElementById("countdown").innerHTML =`${cTime}:00`;
-        
-    }
+    rst();
+    sTime = parseInt(document.getElementById("study").value);
+  	document.getElementById("countdown").innerHTML =`${newTime}:00`;
+}
+
+function setBreak(){
+    breakTime = parseInt(document.getElementById("break").value);
+    study = breakTime * 60;
+    // count.innerHTML = `${sTime}:00`;
+    stop = true;
 }
