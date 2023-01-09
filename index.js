@@ -63,7 +63,7 @@ function rst() {
 function setTime() {
     rst();
     sTime = parseInt(document.getElementById("study").value);
-  	document.getElementById("countdown").innerHTML =`${newTime}:00`;
+  	document.getElementById("countdown").innerHTML =`${sTime}:00`;
 }
 
 function setBreak(){
