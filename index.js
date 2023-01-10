@@ -63,12 +63,12 @@ function rst() {
 function setTime() {
     rst();
     sTime = parseInt(document.getElementById("study").value);
-  	document.getElementById("countdown").innerHTML =`${sTime}:00`;
+  	count.innerHTML =`${sTime}:00`;
 }
 
 function setBreak(){
     breakTime = parseInt(document.getElementById("break").value);
     study = breakTime * 60;
-    // count.innerHTML = `${sTime}:00`;
+    count.innerHTML = `${sTime}:00`;
     stop = true;
 }
