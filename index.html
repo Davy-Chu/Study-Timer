@@ -1,37 +1,34 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-    <title>Timer</title>
-</head>
-<body>
-	<script src="index.js"></script>
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width">
+	    <title>Timer</title>
+	</head>
+	<body>
 
-
-
-	<div class="times">
-
+	  <div class="times">
 		<label for="sTime">Current Study Time </label>
-      <input type="number" id="study" name="sTime" value="25">
-        <button type="button" id="setTime" onclick="setTime()">Set</button>
-        <label for="bTime">Current Break Time </label>
-     <input type="number" id="break" name="bTime" value="5">
-        <button type="button" id="setBreak" onclick="setBreak()">Set</button>
-  </div>
-  <h1 id="t1">Study Time</h1>
-  <h3 id="t2">Get to Work!</h3>
-  <div class="timer">
-      <p id="countdown">25:00</p>
-  </div>
-  <div class="controls">
-      <table>
-        <tr>
-            <td><input  type="button" id="start" value="Start" onclick="startTimer()"></td>
-            <td><input type="button" id="reset" value="Reset" onclick="rst()"></td>
-          </tr>
-      </table>
-  		</div>
-	</body>
+			<input type="number" id="study" name="sTime" value="25">
+				<button type="button" id="setTime" onclick="setTime()">Set</button>
+		<label for="bTime">Current Break Time </label>
+			<input type="number" id="break" name="bTime" value="5">
+				<button type="button" id="setBreak" onclick="setBreak()">Set</button>
+	  </div>
+	  <h1 id="t1">Study Time</h1>
+	  <h3 id="t2">Get to Work!</h3>
+	  <div class="timer">
+	      <p id="countdown">25:00</p>
+	  </div>
+	  <div class="controls">
+	      <table>
+		<tr>
+		    <td><input  type="button" id="start" value="Start" onclick="startTimer()"></td>
+		    <td><input type="button" id="reset" value="Reset" onclick="rst()"></td>
+		</tr>
+	      </table>
+	  </div>
+	  <script src="index.js"></script>
+     </body>
 </html>
